@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Rise Transcription - Job Application</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .container input[type="text"],
+        .container input[type="number"],
+        .container input[type="email"],
+        .container input[type="tel"],
+        .container select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Remote Rise Transcription - Job Application</h2>
+        <form action="process_form.php" method="post">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+            <label for="contact">Contact Info (Email or Phone Number)</label>
+            <input type="email" id="contact" name="contact" placeholder="Your email" required>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Your country" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Your age" required>
+
+            <label for="language">Language Proficiency</label>
+            <input type="text" id="language" name="language" placeholder="Languages you speak" required>
+
+            <label for="education">Level of Education</label>
+            <select id="education" name="education" required>
+                <option value="" disabled selected>Select your education level</option>
+                <option value="High School">High School</option>
+                <option value="Associate Degree">Associate Degree</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate">Doctorate</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
