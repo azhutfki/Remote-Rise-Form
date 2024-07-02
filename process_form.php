@@ -10,8 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = 'brittaniaocho@gmail.com';
     $subject = 'New Job Application';
     $message = "Full Name: $fullname\nContact Info: $contact\nCountry: $country\nAge: $age\nLanguage Proficiency: $language\nLevel of Education: $education";
-    $headers = 'From: webmaster@example.com' . "\r\n" .
-               'Reply-To: webmaster@example.com' . "\r\n" .
+    $headers = 'From: noreply@yourdomain.com' . "\r\n" .
+               'Reply-To: noreply@yourdomain.com' . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
     if (mail($to, $subject, $message, $headers)) {
@@ -19,5 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo 'Failed to send application.';
     }
+} else {
+    echo 'Invalid request method.';
 }
 ?>
