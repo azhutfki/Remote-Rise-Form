@@ -1,4 +1,8 @@
 <?php
+// Enable error logging
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = htmlspecialchars($_POST['fullname']);
     $contact = htmlspecialchars($_POST['contact']);
@@ -17,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($to, $subject, $message, $headers)) {
         echo 'Application submitted successfully.';
     } else {
-        echo 'Failed to send application.';
+        echo 'Failed to send application. Please check your server settings.';
     }
 } else {
     echo 'Invalid request method.';
